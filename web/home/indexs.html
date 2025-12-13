@@ -1,19 +1,19 @@
 <div include-html="components/navbar.html"></div>
-  <div include-html="components/hero.html"></div>
-  <div include-html="components/layanan.html"></div>
-  <div include-html="components/tentang.html"></div>
-  <div include-html="components/produk.html"></div>
-  <div include-html="components/saran.html"></div>
-  <div include-html="components/testimoni.html"></div>
-  <div include-html="components/footer.html"></div>
+<div include-html="components/hero.html"></div>
+<div include-html="components/layanan.html"></div>
+<div include-html="components/tentang.html"></div>
+<div include-html="components/produk.html"></div>
+<div include-html="components/saran.html"></div>
+<div include-html="components/testimoni.html"></div>
+<div include-html="components/footer.html"></div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll("[include-html]").forEach(async (el) => {
-        const file = el.getAttribute("include-html");
-        const response = await fetch(file);
-        const text = await response.text();
-        el.innerHTML = text;
-      });
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[include-html]").forEach(async (el) => {
+      const file = el.getAttribute("include-html");
+      const response = await fetch(file);
+      const text = await response.text();
+      el.innerHTML = text;
     });
-  </script>
+  });
+</script>
