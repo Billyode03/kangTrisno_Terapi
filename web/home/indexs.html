@@ -1,19 +1,26 @@
-<div include-html="components/navbar.html"></div>
-<div include-html="components/hero.html"></div>
-<div include-html="components/layanan.html"></div>
-<div include-html="components/tentang.html"></div>
-<div include-html="components/produk.html"></div>
-<div include-html="components/saran.html"></div>
-<div include-html="components/testimoni.html"></div>
-<div include-html="components/footer.html"></div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>TEST INCLUDE FIX</title>
+</head>
+<body>
+
+<h1>INDEX KELOAD</h1>
+
+<div include-html="../components/navbar.html"></div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("[include-html]").forEach(async (el) => {
-      const file = el.getAttribute("include-html");
-      const response = await fetch(file);
-      const text = await response.text();
-      el.innerHTML = text;
-    });
+  document.querySelectorAll("[include-html]").forEach(el => {
+    fetch(el.getAttribute("include-html"))
+      .then(res => {
+        if (!res.ok) throw new Error("File tidak ditemukan");
+        return res.text();
+      })
+      .then(html => el.innerHTML = html)
+      .catch(err => console.error("ERROR INCLUDE:", err));
   });
 </script>
+
+</body>
+</html>
