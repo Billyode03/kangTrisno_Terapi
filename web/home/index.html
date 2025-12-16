@@ -68,6 +68,17 @@
       .text-brand-white {
         color: var(--brand-white) !important;
       }
+
+      /* HOVER BUTTON  */
+      .hover-card{
+        transition: all 0.3 ease;
+        cursor: pointer;
+      }
+
+      .hover-card:hover{
+        transform: translateY(-8px) scale(1.01);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+      }
     </style>
   </head>
 
@@ -146,9 +157,11 @@
       </div>
       <div class="flex-fill">
         <img
-          src="../../assets/image/hero.png"
+          src="../../assets/image/hero_.png"
           class="img-fluid rounded"
           alt="Hero image"
+          width="450"
+          height="500"
         />
       </div>
     </section>
@@ -236,7 +249,9 @@
         </h2>
         <div class="row g-4 justify-content-center">
           <div class="col-md-4">
-            <div class="p-4 bg-brand-bg rounded shadow-sm text-center h-100 d-flex flex-column">
+            <div
+              class="p-4 bg-brand-bg rounded shadow-sm text-center h-100 d-flex flex-column"
+            >
               <h5 class="fw-bold">Terapis yang Profesional & Berpengalaman</h5>
               <p class="mt-2 flex-grow-1">
                 Ditangani langsung oleh terapis berstandarisasi dengan
@@ -245,7 +260,9 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="p-4 bg-brand-bg rounded shadow-sm text-center h-100 d-flex flex-column">
+            <div
+              class="p-4 bg-brand-bg rounded shadow-sm text-center h-100 d-flex flex-column"
+            >
               <h5 class="fw-bold">Pendekatan Alami & Syariah</h5>
               <p class="mt-2 flex-grow-1">
                 Mengutamakan metode terapi tradisional dan nilai-nilai syariah
@@ -290,11 +307,13 @@
                 Hubungi Kami
               </a>
             </div>
-            <div class="col-md-6 mt-4 mt-md-0">
+            <div class="col-md-6 mt-4 mt-md-0 d-flex justify-content-center">
               <img
-                src="image/about.jpg"
-                class="img-fluid rounded shadow-lg"
-                alt="About image"
+                src="../../assets/image/hero_.png"
+                class="img-fluid rounded"
+                alt="Hero image"
+                width="450"
+                height="500"
               />
             </div>
           </div>
@@ -312,7 +331,7 @@
           <div class="col-md-4">
             <div class="card bg-brand-bg h-100 shadow-sm">
               <img
-                src="image/bolen_.jpg"
+                src="../../assets/image/topung.jpg"
                 class="card-img-top rounded-top"
                 alt="Bollen Premium"
               />
@@ -328,7 +347,7 @@
           <div class="col-md-4">
             <div class="card bg-brand-bg h-100 shadow-sm">
               <img
-                src="image/risol_mayo.jpg"
+                src="../../assets/image/bekam_.jpg"
                 class="card-img-top rounded-top"
                 alt="Risol Mayo"
               />
@@ -341,7 +360,7 @@
           <div class="col-md-4">
             <div class="card bg-brand-bg h-100 shadow-sm">
               <img
-                src="image/hajatan.jpg"
+                src="../../assets/image/tulang sendi.jpg"
                 class="card-img-top rounded-top"
                 alt="Snack Box"
               />
@@ -362,7 +381,9 @@
           class="card shadow-md rounded-lg p-5 mx-auto"
           style="max-width: 800px"
         >
-          <h2 class="fw-bold text-brand-primary mb-3">Saran Untuk Kami</h2>
+          <h2 class="fw-bold text-brand-primary mb-3 text-center">
+            Saran Untuk Kami
+          </h2>
           <p class="text-brand-dark" style="text-align: justify">
             Kami selalu berusaha meningkatkan kualitas produk dan layanan. Jika
             Anda memiliki kritik atau saran, silakan kirim melalui form di
