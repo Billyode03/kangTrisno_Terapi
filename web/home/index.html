@@ -69,15 +69,33 @@
         color: var(--brand-white) !important;
       }
 
-      /* HOVER BUTTON  */
-      .hover-card{
-        transition: all 0.3 ease;
+      /* HOVER */
+      .hover-card {
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+          box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
         cursor: pointer;
       }
 
-      .hover-card:hover{
+      .hover-card:hover {
         transform: translateY(-8px) scale(1.01);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      .btn-animate {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+          background-color 0.3s ease-in-out;
+      }
+
+      .btn-animate:hover {
+        transform: translateY(-4px) scale(1.08);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+        background-color: #f9fafb;
+        color: 0.25 ease;
+      }
+
+      .btn-animate:active{
+        transform: translateY(-1px) scale(0.97);
       }
     </style>
   </head>
@@ -150,7 +168,7 @@
         <a
           href="https://wa.me/6282159297254?text=Assalamualaikum%20Pak%2C%20saya%20ingin%20menanyakan%20jadwal%20terapi.%20Apakah%20sedang%20buka%3F
           "
-          class="btn bg-brand-secondary text-brand-white px-4 py-2 mt-3 shadow"
+          class="btn bg-brand-secondary text-brand-white px-4 py-2 mt-3 shadow transition btn-animate hover"
         >
           Pesan via WhatsApp
         </a>
@@ -174,9 +192,9 @@
         </h2>
         <div class="row g-4 justify-content-center">
           <div class="col-md-4">
-            <div class="card bg-brand-bg h-100 shadow-sm">
+            <div class="card bg-brand-bg h-100 shadow-sm hover-card">
               <img
-                src="image/Eating together-cuate.png"
+                src="../../assets/image/topung.jpg"
                 class="card-img-top rounded-top"
                 alt="Totok Punggung"
               />
@@ -190,9 +208,9 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card bg-brand-bg h-100 shadow-sm">
+            <div class="card bg-brand-bg h-100 shadow-sm hover-card">
               <img
-                src="image/Marriage counseling-amico.png"
+                src="../../assets/image/bekam_.jpg"
                 class="card-img-top rounded-top"
                 alt="Bekam"
               />
@@ -206,9 +224,9 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card bg-brand-bg h-100 shadow-sm">
+            <div class="card bg-brand-bg h-100 shadow-sm hover-card">
               <img
-                src="image/Catering service-bro.png"
+                src="../../assets/image/ruqyah.png"
                 class="card-img-top rounded-top"
                 alt="Ruqyah"
               />
@@ -222,9 +240,9 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card bg-brand-bg h-100 shadow-sm">
+            <div class="card bg-brand-bg h-100 shadow-sm hover-card">
               <img
-                src="image/Catering service-bro.png"
+                src="../../assets/image/tulang sendi.jpg"
                 class="card-img-top rounded-top"
                 alt="Perawatan Tulang Sendi"
               />
@@ -396,7 +414,7 @@
               class="btn btn-success d-inline-flex align-items-center gap-2 px-4 py-2 shadow"
             >
               <img
-                src="image/logo_wa.png"
+                src="../../assets/icon/logo_wa.png"
                 class="me-2"
                 width="24"
                 height="24"
@@ -461,21 +479,36 @@
             target="_blank"
             class="text-reset"
           >
-            <img src="image/logo_ig.png" alt="IG" width="24" height="24" />
+            <img
+              src="../../assets/icon/logo_ig.png"
+              alt="IG"
+              width="24"
+              height="24"
+            />
           </a>
           <a
             href="https://wa.me/6282159297254"
             target="_blank"
             class="text-reset"
           >
-            <img src="image/logo_fb.png" alt="FB" width="24" height="24" />
+            <img
+              src="../../assets/icon/logo_fb.png"
+              alt="FB"
+              width="24"
+              height="24"
+            />
           </a>
           <a
             href="https://wa.me/6282159297254"
             target="_blank"
             class="text-reset"
           >
-            <img src="image/logo_wa.png" alt="WA" width="24" height="24" />
+            <img
+              src="../../assets/icon/logo_wa.png"
+              alt="WA"
+              width="24"
+              height="24"
+            />
           </a>
         </div>
         <p class="mb-0 text-brand-white">
