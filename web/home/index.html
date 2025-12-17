@@ -72,15 +72,21 @@
       /* HOVER */
       .hover-card {
         transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-          box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
         cursor: pointer;
       }
 
       .hover-card:hover {
-        transform: translateY(-15px) scale(1.03);
+        transform: translateY(-13px) scale(1.03);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        border-color: var(--brand-secondary);
       }
 
+      .hover-card:active {
+        transform: translateY(-6px) scale(0.98);
+      }
+
+      /* BUTTON */
       .btn-animate {
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
           background-color 0.3s ease-in-out;
@@ -94,6 +100,23 @@
       }
 
       .btn-animate:active {
+        transform: translateY(-1px) scale(0.97);
+      }
+
+      /* BTN WA */
+      .btn-animate-wa {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+          background-color 0.3s ease-in-out;
+      }
+
+      .btn-animate-wa:hover {
+        transform: translateY(-4px) scale(1.08);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+        background-color: var(--brand-primary);
+        color: 0.25 ease;
+      }
+
+      .btn-animate-wa:active {
         transform: translateY(-1px) scale(0.97);
       }
     </style>
@@ -167,7 +190,7 @@
         <a
           href="https://wa.me/6282159297254?text=Assalamualaikum%20Pak%2C%20saya%20ingin%20menanyakan%20jadwal%20terapi.%20Apakah%20sedang%20buka%3F
           "
-          class="btn bg-brand-secondary text-brand-white px-4 py-2 mt-3 shadow transition btn-animate "
+          class="btn bg-brand-secondary text-brand-white px-4 py-2 mt-3 shadow transition btn-animate"
         >
           Pesan via WhatsApp
         </a>
@@ -193,15 +216,15 @@
           <div class="col-md-4">
             <div class="card bg-brand-bg h-100 shadow-sm hover-card">
               <img
-                src="../../assets/image/topung.jpg"
+                src="../../assets/image/bekam_.jpg"
                 class="card-img-top rounded-top"
-                alt="Totok Punggung"
+                alt="Bekam"
               />
               <div class="card-body text-center">
-                <h5 class="card-title">Terapi Totok Punggung</h5>
+                <h5 class="card-title">Bekam</h5>
                 <p class="card-text">
-                  Terapi tradisional untuk membantu melancarkan peredaran darah
-                  dan merelaksasi tubuh.
+                  Metode terapi sunnah untuk membantu menjaga kebugaran dan
+                  keseimbangan tubuh.
                 </p>
               </div>
             </div>
@@ -267,7 +290,7 @@
         <div class="row g-4 justify-content-center">
           <div class="col-md-4">
             <div
-              class="p-4 bg-brand-bg rounded shadow-sm text-center h-100 d-flex flex-column"
+              class="p-4 bg-brand-bg rounded shadow-sm text-center h-100 d-flex flex-column hover-card"
             >
               <h5 class="fw-bold">Terapis yang Profesional & Berpengalaman</h5>
               <p class="mt-2 flex-grow-1">
@@ -278,7 +301,7 @@
           </div>
           <div class="col-md-4">
             <div
-              class="p-4 bg-brand-bg rounded shadow-sm text-center h-100 d-flex flex-column"
+              class="p-4 bg-brand-bg rounded shadow-sm text-center h-100 d-flex flex-column hover-card"
             >
               <h5 class="fw-bold">Pendekatan Alami & Syariah</h5>
               <p class="mt-2 flex-grow-1">
@@ -319,7 +342,7 @@
               </p>
               <a
                 href="https://wa.me/6282159297254?text=Assalamualaikum%20Pak%2C%20saya%20ingin%20menanyakan%20jadwal%20terapi.%20Apakah%20sedang%20buka%3F"
-                class="btn bg-brand-secondary text-brand-white px-4 py-2 mt-4 shadow"
+                class="btn bg-brand-secondary text-brand-white px-4 py-2 mt-4 shadow btn-animate"
               >
                 Hubungi Kami
               </a>
@@ -346,7 +369,7 @@
         </h2>
         <div class="row g-4">
           <div class="col-md-4">
-            <div class="card bg-brand-bg h-100 shadow-sm">
+            <div class="card bg-brand-bg h-100 shadow-sm hover-card">
               <img
                 src="../../assets/image/topung.jpg"
                 class="card-img-top rounded-top"
@@ -362,7 +385,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card bg-brand-bg h-100 shadow-sm">
+            <div class="card bg-brand-bg h-100 shadow-sm hover-card">
               <img
                 src="../../assets/image/bekam_.jpg"
                 class="card-img-top rounded-top"
@@ -375,7 +398,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card bg-brand-bg h-100 shadow-sm">
+            <div class="card bg-brand-bg h-100 shadow-sm hover-card">
               <img
                 src="../../assets/image/tulang sendi.jpg"
                 class="card-img-top rounded-top"
@@ -410,7 +433,7 @@
             <a
               href="https://wa.me/6282159297254"
               target="_blank"
-              class="btn btn-success d-inline-flex align-items-center gap-2 px-4 py-2 shadow"
+              class="btn btn-success d-inline-flex align-items-center gap-2 px-4 py-2 shadow btn-animate-wa"
             >
               <img
                 src="../../assets/icon/logo_wa.png"
@@ -462,10 +485,62 @@
         <h2 class="text-center fw-bold text-brand-primary mb-4">
           Testimoni Pelanggan
         </h2>
-        <!-- Tambahkan card / slider testimoni di sini -->
-        <p class="text-center text-muted">
-          Testimoni pelanggan akan segera kami tampilkan.
-        </p>
+
+        <div class="row justify-content-center g-4">
+          <!-- VIDEO 1 -->
+          <div class="col-md-4">
+            <div class="card shadow-sm hover-card h-100">
+              <div class="ratio ratio-16x9 rounded-top overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_1"
+                  title="Testimoni Pelanggan"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="card-body text-center">
+                <h6 class="fw-bold mb-1">Testimoni Pasien</h6>
+                <p class="small text-muted mb-0">Totok Punggung • Bekam</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- VIDEO 2 -->
+          <div class="col-md-4">
+            <div class="card shadow-sm hover-card h-100">
+              <div class="ratio ratio-16x9 rounded-top overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_2"
+                  title="Testimoni Pelanggan"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="card-body text-center">
+                <h6 class="fw-bold mb-1">Testimoni Pasien</h6>
+                <p class="small text-muted mb-0">Ruqyah Syariah</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- VIDEO 3 -->
+          <div class="col-md-4">
+            <div class="card shadow-sm hover-card h-100">
+              <div class="ratio ratio-16x9 rounded-top overflow-hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_3"
+                  title="Testimoni Pelanggan"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="card-body text-center">
+                <h6 class="fw-bold mb-1">Testimoni Pasien</h6>
+                <p class="small text-muted mb-0">Perawatan Tulang Sendi</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
